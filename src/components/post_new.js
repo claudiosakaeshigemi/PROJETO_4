@@ -1,5 +1,7 @@
 import React , { Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
+import {Link} from  'react-router-dom';
+
 
 class PostsNew extends Component {
 
@@ -18,7 +20,7 @@ class PostsNew extends Component {
                     { ...field.input }
                 />
                 <div className ="text-help">
-                {touched ? error:''}
+                {touched && error}
                 </div>
                 
             </div>
@@ -51,7 +53,7 @@ class PostsNew extends Component {
                 />
 
                 <button type ="submit" className="btn btn-primary">submit </button>
-                
+                <Link to="/" className="btn btn-danger"> Cancel </Link>
             </form>
         );
     }
