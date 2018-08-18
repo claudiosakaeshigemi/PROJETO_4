@@ -34,12 +34,12 @@ class PostsNew extends Component {
                 />
                 <Field
                     label = "Categories: "
-                    name= "Categories"
+                    name= "categories"
                     component = {this.renderField}
                 />
                 <Field
                     label = "Post Content: "
-                    name= "Content"
+                    name= "content"
                     component = {this.renderField}
                 />
 
