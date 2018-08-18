@@ -13,7 +13,7 @@ class PostsNew extends Component {
                 type = "text"
                     { ...field.input }
                 />
-                {field.meta.error}
+                {field.meta.touched && field.meta.error}
             </div>
         );
     }
@@ -56,11 +56,11 @@ function validate(values ) {
     if(!values.title || values.title.length < 3 ){
         errors.title = "Enter a title, that is at least 3 characters!";
     }
-    if(!values.categories || values.categories.length < 3 ){
-        errors.categories = "Enter some categories, that is at least 3 characters!";
+    if(!values.categories ){
+        errors.categories = "Enter some categories!";
     }
-    if(!values.content || values.content.length < 3  ){
-        errors.content = "Enter some content, that is at least 3 characters!";
+    if(!values.content  ){
+        errors.content = "Enter some content!";
     }
 
     return errors;
