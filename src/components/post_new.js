@@ -4,8 +4,6 @@ import { Field, reduxForm } from 'redux-form';
 class PostsNew extends Component {
 
 
-
-
     renderField(field) {
         return (
             <div className = "form-group"> 
@@ -15,6 +13,7 @@ class PostsNew extends Component {
                 type = "text"
                     { ...field.input }
                 />
+                {field.meta.error}
             </div>
         );
     }
